@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Restaurant Petrograd</title>
+    <link href='https://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">Petrograd</a> </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li> <a href="#">Restauranten</a> </li>
+                    <li> <a href="#">Menuen</a> </li>
+                    <li> <a href="#">Bestil bord</a> </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- splash -->
+    <div id="splash">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 col-md-2"> <img src="logo.png" class="img-responsive logoimg" alt="Restaurant Petrograd logo"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Content -->
+    <div class="container">
+        <!-- sortering og filtrering -->
+        <div class="row">
+            <!-- filtrering -->
+            <div class="col-xs-12 col-sm-8 filtrering">Filtrer: <a href="#">Kun vegetar</a> <a href="#">Ikke vegetar</a> <a href="#">Uden Alkohol</a> <a href="#">På tilbud</a> </div>
+            <!-- sortering -->
+            <div class="col-xs-12 col-sm-4 sortering">
+                <div class="dropdown">
+                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Sorter efter <span class="caret"></span> </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Pris - lav</a></li>
+                        <li><a href="#">Pris - høj</a></li>
+                        <li><a href="#">Navn - A->Å</a></li>
+                        <li><a href="#">Navn - Å->A</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- sortering og filtrering slut -->
+
+        <!-- Forretter Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Forretter</h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+
+            <!-- Forret 1 -->
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <a href="#"> <img class="img-responsive" src="imgs/small/rodbede-cabanossi-sm.jpg" alt=""> </a>
+                <h3>Cabanossi med rødbedecreme og løg</h3>
+                <h4>49.-</h4>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalforret1">Se detaljer<span class="glyphicon glyphicon-chevron-right"></span></button>
+            </div>
+            <!-- Forret 1 modal boks -->
+            <div class="modal fade" id="modalforret1" tabindex="-1" role="dialog" aria-labelledby="modalforret1_label">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="modalforret1_label">Cabanossi med rødbedecreme og løg</h4> </div>
+                        <div class="modal-body"> <img class="img-responsive" src="imgs/medium/rodbede-cabanossi-md.jpg" alt="">
+                            <article>
+                                <p class="langbeskrivelse">Cabanossi med rødbedecreme og creme er egentlig en forret, men kammerat Vladimir elskede denne ret så højt, at han forbød restauranter i Krigien at sælge det som andet end en hovedret. Vi anbefaler det dog som forret, inden en god Bortsjs. Skylles helst ned med vodka.</p>
+                                <div class="ekstra_og_relaterede"> </div>
+                                <div class="ekstra_og_pris">
+                                    <section class="ekstrainfo">
+                                        <p>Denne ret er egnet for vegetarer</p>
+                                        <p>Allergener: Laktose</p>
+                                    </section>
+                                    <h4 class="rabat">Pris: 39.-</h4>
+                                    <h4 class="rabatpris">Pris: 31.-</h4> </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Forret 1 modal boks slut -->
+
+            <!-- Forret 2 -->
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <a href="#"> <img class="img-responsive" src="imgs/small/kaalsuppe-sm.jpg" alt=""> </a>
+                <h3>Kålsuppe med 7 kålvarianter</h3>
+                <h4 class="udsolgt">Pris: 49.-</h4>
+                <h4 class="udsolgttekst">Denne ret er desværre udsolgt</h4>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalforret2">Se detaljer<span class="glyphicon glyphicon-chevron-right"></span></button>
+            </div>
+            <!-- Forret 2 modal boks -->
+            <div class="modal fade" id="modalforret2" tabindex="-1" role="dialog" aria-labelledby="modalforret2_label">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="modalforret2_label">Kålsuppe med 7 kålvarianter</h4> </div>
+                        <div class="modal-body"> <img class="img-responsive" src="imgs/medium/kaalsuppe-md.jpg" alt="">
+                            <article>
+                                <p class="langbeskrivelse">Denne lækre suppe består af 7 forskellige slags kål: Hvidkål, grønkål, brunkål, spidskål, kabanossikål, sibirisk kål og kålrabi. Dertil en masse Voda (vand) og krydderier fra Østsibirien.</p>
+                                <section class="ekstrainfo">
+                                    <p>Denne ret er egnet for vegetarer</p>
+                                </section>
+                            </article>
+                            <h4 class="udsolgt">Pris: 49.-</h4>
+                            <h4 class="udsolgttekst">Denne ret er desværre udsolgt</h4> </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Forret 2 modal boks slut -->
+
+            <!-- Forret 3 -->
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <a href="#"> <img class="img-responsive" src="imgs/small/ringbroed-druer-sm.jpg" alt=""> </a>
+                <h3>Russisk ringbrød af Karapatisk mel</h3>
+                <h4 class="rabat">Pris: 39.-</h4>
+                <h4 class="rabatpris">Pris: 31.-</h4>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalforret3">Se detaljer<span class="glyphicon glyphicon-chevron-right"></span></button>
+            </div>
+            <!-- Forret 3 modal boks -->
+            <div class="modal fade" id="modalforret3" tabindex="-1" role="dialog" aria-labelledby="modalforret3_label">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="modalforret3_label">Kålsuppe med 7 kålvarianter</h4> </div>
+                        <div class="modal-body"> <img class="img-responsive" src="imgs/medium/ringbroed-druer-md.jpg" alt="">
+                            <article>
+                                <p class="langbeskrivelse">Russisk ringbrød efter en klassisk opskrift fra Karapatien. Dejen blandes koldhæver 30 dage, inde brødet bages over bål. Meget sprødt, godt med Karapatisk bjerggedsmør.</p>
+                                <section class="ekstrainfo">
+                                    <p>Denne ret er egnet for vegetarer</p>
+                                    <p>Allergener: Laktose</p>
+                                </section>
+                            </article>
+                            <h4 class="rabat">Pris: 39.-</h4>
+                            <h4 class="rabatpris">Pris: 31.-</h4> </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Forret 3 modal boks slut -->
+
+        </div>
+        <!-- /.row -->
+        <hr>
+        <!-- Hovedretter Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Hovedretter</h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+            <!-- Hovedret 1 -->
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <a href="#"> <img class="img-responsive" src="imgs/small/bulgarskbondesuppe-sm.jpg" alt=""> </a>
+                <h3>Cauceskus bulgarske bondesuppe</h3>
+                <h4>99.-</h4> <a class="btn btn-primary" href="#">Se detaljer<span class="glyphicon glyphicon-chevron-right"></span></a> </div>
+            <!-- Hovedret 2 -->
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <a href="#"> <img class="img-responsive" src="imgs/small/bondeplatte-sm.jpg" alt=""> </a>
+                <h3>Zygroffs bondeplatte - bøndernes svar på Tapas</h3>
+                <h4>109.-</h4> <a class="btn btn-primary" href="#">Se detaljer<span class="glyphicon glyphicon-chevron-right"></span></a> </div>
+            <!-- Hovedret 3 -->
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <a href="#"> <img class="img-responsive" src="imgs/small/moldaviskfiskesuppe-sm.jpg" alt=""> </a>
+                <h3>Den dejlige, alkoholholdige moldaviske fiskesuppe</h3>
+                <h4>139.-</h4> <a class="btn btn-primary" href="#">Se detaljer<span class="glyphicon glyphicon-chevron-right"></span></a> </div>
+        </div>
+        <!-- /.row -->
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Restaurant Petrograd</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+    </div>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

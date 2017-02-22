@@ -1,0 +1,106 @@
+/*!
+ * Start Bootstrap - 1 Col Portfolio (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/*Generelt*/
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #29484b;
+    background-color: #f2e4d7;
+
+}
+
+#splash {
+    height: 75vh;
+    background-image: url('../backgr.jpg');
+    background-size: cover;
+    /*    position: relative;*/
+    z-index: 5;
+}
+.logoimg{
+    margin-top: 75px;
+}
+
+
+/*Typo*/
+h1, h2, h3, h4, h5, h6, nav a, .ekstrainfo, .relaterede p{
+    font-family: 'Russo One', sans-serif;
+    /*font-family: 'VT323';*/
+    /* husk at inkludere google font VT323 i HTML'en */
+    font-weight: normal;
+}
+h4{
+    color: #7c1f17;
+}
+
+/*Footer*/
+footer {
+    margin: 50px 0;
+}
+
+/*modals*/
+.langbeskrivelse{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.udsolgt, .rabat{
+    text-decoration: line-through;
+}
+.rabatpris{
+    color: green;
+}
+.ekstra_og_pris {
+    display: inline-block;
+}
+
+.relaterede {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+
+}
+
+.relaterede .small_image {
+    width: 30%;
+}
+
+.relaterede .liste {
+    display: flex;
+    align-content: space-between;
+}
+.relatprod img {
+    width: 80%;
+}
+
+/*filtrering og sortering*/
+.sortering, .filtrering{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/*filtrering links*/
+.filtrering a{
+    color: #7c1f17;
+    margin-right: 1vw;
+}
+.filtrering a:active{
+    text-decoration: underline;
+}
+.filtrering a:hover{
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+/*sortering*/
+@media screen and (min-width: 768px){
+    .sortering{
+        text-align: right;
+    }
+    .sortering .dropdown-menu {
+    right: 0;
+    left: auto;
+    }
+}
