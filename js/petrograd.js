@@ -44,9 +44,21 @@ function visProdukt( produkt ) {
         klon.querySelector(".pris").classList.add("rabat");
     }
 
+
+    // tilføj klasser til produkt
     if( produkt.vegetar == true ) {
         klon.querySelector(".produkt").classList.add("vegetar");
     }
+    if( produkt.udsolgt ) {
+        klon.querySelector(".produkt").classList.add("udsolgt");
+    }
+    if( produkt.rabatsats > 0 ) {
+        klon.querySelector(".produkt").classList.add("tilbud");
+    }
+    if( produkt.alkoholprocent > 0 ) {
+        klon.querySelector(".produkt").classList.add("alkohol");
+    }
+
 
     // tilføj produkt-id til modalknap
     klon.querySelector(".modalknap").dataset.produkt = produkt.id;
