@@ -68,6 +68,36 @@
         </div>
         <!-- sortering og filtrering slut -->
 
+            <!-- Forret 1 modal boks -->
+            <div class="modal fade" id="modalforret1" tabindex="-1" role="dialog" aria-labelledby="modalforret1_label">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <!-- det er her min modal_template skal være! -->
+
+                    </div>
+                </div>
+            </div>
+
+             <template id="modal_template">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title data_navn" id="modalforret1_label">Cabanossi med rødbedecreme og løg</h4> </div>
+                        <div class="modal-body"> <img class="img-responsive" src="imgs/medium/rodbede-cabanossi-md.jpg" alt="">
+                            <article>
+                                <p class="langbeskrivelse">Cabanossi med rødbedecreme og creme er egentlig en forret, men kammerat Vladimir elskede denne ret så højt, at han forbød restauranter i Krigien at sælge det som andet end en hovedret. Vi anbefaler det dog som forret, inden en god Bortsjs. Skylles helst ned med vodka.</p>
+                                <div class="ekstra_og_relaterede"> </div>
+                                <div class="ekstra_og_pris">
+                                    <section class="ekstrainfo">
+                                        <p>Denne ret er egnet for vegetarer</p>
+                                        <p>Allergener: Laktose</p>
+                                    </section>
+                                    <h4 class="rabat">Pris: 39.-</h4>
+                                    <h4 class="rabatpris">Pris: 31.-</h4> </div>
+                            </article>
+                        </div>
+                        </template>
+            <!-- Forret 1 modal boks slut -->
+
         <!-- Forretter Page Heading -->
         <div class="row">
             <div class="col-lg-12">
@@ -81,7 +111,7 @@
 
             <!-- Forret 1 -->
             <template id="produkt_template">
-            <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="col-sm-4 col-lg-4 col-md-4 produkt">
                 <a href="#"> <img class="img-responsive data_billede" src="imgs/small/rodbede-cabanossi-sm.jpg" alt=""> </a>
                 <h3 class="data_navn">DATA_NAVN</h3>
                 <h4 class="pris">Pris: <span class="data_pris">DATA_PRIS</span>,-</h4> <!-- TODO: Sæt udsolgt class ved udsolgt
@@ -89,7 +119,7 @@
                 <h4 class="rabatpris">Pris: <span class="data_rabatpris">DATA_RABATPRIS</span>,-</h4> <!-- skal kun vises ved rabat -->
                 <h4 class="udsolgttekst">Denne ret er desværre udsolgt</h4>
                 <!-- skal kun vises ved udsolgte produkter -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalforret1">Se detaljer<span class="glyphicon glyphicon-chevron-right"></span></button>
+                <button type="button" class="btn btn-primary modalknap" data-toggle="modal" data-target="#modalforret1">Se detaljer<span class="glyphicon glyphicon-chevron-right"></span></button>
             </div>
             </template>
 
