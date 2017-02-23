@@ -5,8 +5,35 @@ function sidenVises() {
 
     // læs produktliste
     $.getJSON("http://petlatkea.dk/2017/dui/api/productlist?callback=?", visProduktListe);
+
+    // registrer filter-knap
+    document.querySelector(".filterknap_vegetar").addEventListener("click", filtrerVegetar );
+
 }
 
+var vegetarfilter = false;
+
+function filtrerVegetar( event ) {
+    console.log("filtrerVegetar");
+    document.querySelectorAll(".produkt:not(.vegetar)").forEach( p => p.classList.toggle("hidden") ) ;
+    /*
+    // toggle vegetarfilter
+    if( vegetarfilter ) {
+        vegetarfilter = false;
+        console.log("vis ikke-vegetar produkter");
+        document.querySelectorAll(".produkt:not(.vegetar)").forEach( p => p.classList.toggle("hidden") ) ;
+    } else {
+        vegetarfilter = true;
+        // vis kun vegetar-produkter!
+        document.querySelectorAll(".produkt:not(.vegetar)").forEach( p => p.classList.add("hidden"));
+        console.log("skjul ikke-vegetar produkter");
+    }
+    */
+    event.preventDefault();
+}
+
+
+/* ***************************************** */
 
 function visProduktListe( listen ) {
     console.table( listen );
