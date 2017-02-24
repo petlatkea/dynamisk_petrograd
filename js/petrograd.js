@@ -88,11 +88,21 @@ function visProdukt( produkt ) {
     klon.querySelector(".modalknap").dataset.produkt = produkt.id;
 
     // registrer klik på modalknap
-    klon.querySelector(".modalknap").addEventListener("click", modalKnapKlik)
+    klon.querySelector(".modalknap").addEventListener("click", modalKnapKlik);
 
     // append klon til .produkt_liste
-    document.querySelector(".produktliste").appendChild(klon);
+   // document.querySelector(".produktliste").appendChild(klon);
+
+    // hvis kategori var forret, append til forretliste
+    if( produkt.kategori == "forretter") {
+        document.querySelector(".forretliste").appendChild(klon);
+    } else if( produkt.kategori == "hovedretter" ) {
+        // hvis kategori var hovedret, append til hovedretliste
+        document.querySelector(".hovedretliste").appendChild(klon);
+    }
+    // osv.
 }
+
 
 function modalKnapKlik( event ) {
     console.log("knapklik", event);
