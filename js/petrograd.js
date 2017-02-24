@@ -6,39 +6,36 @@ function sidenVises() {
     // læs produktliste
     $.getJSON("http://petlatkea.dk/2017/dui/api/productlist?callback=?", visProduktListe);
 
-    // registrer filter-knap
-    document.querySelector(".filterknap_vegetar").addEventListener("click", filtrerVegetar );
+    document.querySelector(".filterknap_vegetar").addEventListener("click", filtrerVegetar);
 
 }
-
-var vegetarfilter = false;
 
 function filtrerVegetar( event ) {
-    console.log("filtrerVegetar");
-    document.querySelectorAll(".produkt:not(.vegetar)").forEach( p => p.classList.toggle("hidden") ) ;
-    /*
-    // toggle vegetarfilter
-    if( vegetarfilter ) {
-        vegetarfilter = false;
-        console.log("vis ikke-vegetar produkter");
-        document.querySelectorAll(".produkt:not(.vegetar)").forEach( p => p.classList.toggle("hidden") ) ;
-    } else {
-        vegetarfilter = true;
-        // vis kun vegetar-produkter!
-        document.querySelectorAll(".produkt:not(.vegetar)").forEach( p => p.classList.add("hidden"));
-        console.log("skjul ikke-vegetar produkter");
-    }
-    */
+    console.log("klik på vegetar-filter");
+
+    // find alle ikke-vegetar-produkter
+    var liste = document.querySelectorAll(".produkt:not(.vegetar)");
+
+    // skjul dem - tilføj klassen "hide"
+    liste.forEach( div => div.classList.toggle("hide") );
+
     event.preventDefault();
 }
+
 
 
 /* ***************************************** */
 
 function visProduktListe( listen ) {
     console.table( listen );
+
+    // filtrer udsolgte produkter fra ...
+//    listen = listen.filter( produkt => !produkt.udsolgt );
+
     listen.forEach( visProdukt );
 }
+
+
 
 function visProdukt( produkt ) {
     console.log( produkt );
@@ -46,7 +43,7 @@ function visProdukt( produkt ) {
     var klon = document.querySelector("#produkt_template").content.cloneNode(true);
 
     // indsæt data i klon
-    klon.querySelector(".data_navn").innerHTML = produkt.navn;
+    klon.querySelector(".data_navn").textContent = produkt.navn;
     klon.querySelector(".data_pris").innerHTML = produkt.pris;
 
     var rabatpris = Math.ceil( produkt.pris - (produkt.pris*produkt.rabatsats/100) );
